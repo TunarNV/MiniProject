@@ -1,11 +1,11 @@
-import required.Required;
-import user.entity.AppData;
-import user.impl.jsonuserimpl.JsonUserImpl;
-import user.impl.usermenuimpl.UserMenuImpl;
-import user.impl.usermenuimpl.UserMenuServiceImpl;
-import user.impl.userserviceimpl.UserServiceImpl;
-import user.service.jsonuserservice.IUserPersistence;
-import user.service.userservice.IUserService;
+import cinema.required.Required;
+import cinema.appdata.AppData;
+import cinema.user.impl.jsonuserimpl.JsonUserImpl;
+import cinema.user.impl.usermenuimpl.UserMenuImpl;
+import cinema.user.impl.usermenuimpl.UserMenuServiceImpl;
+import cinema.user.impl.userserviceimpl.UserServiceImpl;
+import cinema.user.service.jsonuserservice.IUserPersistence;
+import cinema.user.service.userservice.IUserService;
 
 public class Main {
     public static void main(String[] args) throws IllegalAccessException {
@@ -19,7 +19,7 @@ public class Main {
         while (loop) {
             userMenu.displayMenu();
             int choice = required.inputInteger("Please input your Choice: ");
-            if (choice == 6) {
+            if (choice == 3) {
                 loop = false;
             }
             if(appData.getUsers() == null){
