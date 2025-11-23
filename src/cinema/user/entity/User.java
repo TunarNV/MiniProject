@@ -6,6 +6,7 @@ import cinema.user.annotations.Username;
 import cinema.user.enums.Role;
 
 public class User {
+    private int id;
     @NotNull
     @Username(min = 3 , max = 20)
     private String username;
@@ -19,6 +20,10 @@ public class User {
         this.username = username;
         this.password = password;
         this.role = role;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getUsername() {
@@ -44,6 +49,7 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
+
 
     @Override
     public String toString() {
