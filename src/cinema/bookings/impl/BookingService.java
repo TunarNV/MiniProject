@@ -62,9 +62,9 @@ public class BookingService implements IBookingService {
 
         appData.getBookings().add(booking);
 
-        System.out.println("✅ Booking successful!");
-        System.out.println("🎫 Seats: " + seats);
-        System.out.println("💵 Total Price: " + totalPrice + " AZN");
+        System.out.println("Booking successful!");
+        System.out.println("Seats: " + seats);
+        System.out.println("Total Price: " + totalPrice + " AZN");
 
 
         return true;

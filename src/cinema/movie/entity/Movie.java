@@ -62,6 +62,9 @@ public class Movie {
     }
 
     public void setRating(double rating) {
+        if (rating < 0 || rating > 10) {
+            throw new IllegalArgumentException("Rating must be between 0 and 10");
+        }
         this.rating = rating;
     }
 
@@ -75,5 +78,17 @@ public class Movie {
                 ", genre='" + genre + '\'' +
                 ", rating=" + rating +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Movie movie)) return false;
+        return id == movie.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(id);
     }
 }
